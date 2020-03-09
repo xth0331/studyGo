@@ -44,7 +44,10 @@ func main() {
 	fmt.Println(strings.HasPrefix(ss, "xiet"))
 	// 后缀
 	fmt.Println(strings.HasSuffix(ss, "xiet"))
+	s4 := "abcdeb"
+	fmt.Println(strings.Index(s4, "c"))
+	fmt.Println(strings.LastIndex(s4, "b"))
+	// 拼接
+	fmt.Println(strings.Join(ret, "+"))
 	
-	s4 := 
-
 }
