@@ -1,13 +1,19 @@
 package main
 
 import (
-	"unicode/utf8"
 	"fmt"
 )
 
-var name string = "hello沙河小王子"
+var name = []rune("hello沙河小王子")
+var count int64
 
 func main() {
-	hansCount := utf8.RuneCountInString(name)
-	fmt.Printf("name字符串中中文的数量是：%v\n", hansCount)
+	for _, asciiValue := range name {
+		if asciiValue > 127 {
+			count++
+		}
+	}
+	fmt.Printf("%v", count)
+	// hansCount := utf8.RuneCount(name)
+	// fmt.Printf("name字符串中中文的数量是：%v\n", hansCount)
 }
