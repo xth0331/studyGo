@@ -12,5 +12,9 @@ func main() {
 	fmt.Println(a1, a2, a3)
 
 	// 从切片中删除元素
-	//
+
+	// 将a1中的索引为1的3这个元素删除掉
+	a1 = append(a1[:1], a1[2:]...)
+	fmt.Println(a1)
+	fmt.Println(cap(a1))
 }
