@@ -17,4 +17,10 @@ func main() {
 	a1 = append(a1[:1], a1[2:]...)
 	fmt.Println(a1)
 	fmt.Println(cap(a1))
+
+	x1 := [...]int{1, 3, 5} // 数组
+	s1 := x1[:]             // 切片
+	fmt.Println(s1, len(s1), cap(s1))
+	s1 = append(s1[:1], s1[2:]...)
+	fmt.Println(s1, len(s1), cap(s1))
 }
